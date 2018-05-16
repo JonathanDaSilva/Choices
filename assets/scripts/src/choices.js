@@ -2418,7 +2418,7 @@ class Choices {
         const isOptDisabled = option.disabled || (option.parentNode && option.parentNode.disabled);
         this._addChoice(
           option[valueKey],
-          (isType('Object', option)) ? option[labelKey] : option.innerHTML,
+          (isType('Object', option)) ? option[labelKey] : option.textContent.trim(),
           option.selected,
           isOptDisabled,
           groupId,
