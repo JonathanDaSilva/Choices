@@ -62,7 +62,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -97,14 +97,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	var Choices = function () {
 	  function Choices() {
-	    var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '[data-choice]';
+	    var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "[data-choice]";
 	    var userConfig = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
 	    _classCallCheck(this, Choices);
 
 	    // If there are multiple elements, create a new instance
 	    // for each element besides the first one (as that already has an instance)
-	    if ((0, _utils.isType)('String', element)) {
+	    if ((0, _utils.isType)("String", element)) {
 	      var elements = document.querySelectorAll(element);
 	      if (elements.length > 1) {
 	        for (var i = 1; i < elements.length; i++) {
@@ -125,14 +125,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      removeItemButton: false,
 	      editItems: false,
 	      duplicateItems: true,
-	      delimiter: ',',
+	      delimiter: ",",
 	      paste: true,
 	      searchEnabled: true,
 	      searchChoices: true,
 	      searchFloor: 1,
 	      searchResultLimit: 4,
-	      searchFields: ['label', 'value'],
-	      position: 'auto',
+	      searchFields: ["label", "value"],
+	      position: "auto",
 	      resetScrollPosition: true,
 	      regexFilter: null,
 	      shouldSort: true,
@@ -143,68 +143,68 @@ return /******/ (function(modules) { // webpackBootstrap
 	      searchPlaceholderValue: null,
 	      prependValue: null,
 	      appendValue: null,
-	      renderSelectedChoices: 'auto',
-	      loadingText: 'Loading...',
-	      noResultsText: 'No results found',
-	      noChoicesText: 'No choices to choose from',
-	      itemSelectText: 'Press to select',
+	      renderSelectedChoices: "auto",
+	      loadingText: "Loading...",
+	      noResultsText: "No results found",
+	      noChoicesText: "No choices to choose from",
+	      itemSelectText: "Press to select",
 	      addItemText: function addItemText(value) {
-	        return 'Press Enter to add <b>"' + (0, _utils.stripHTML)(value) + '"</b>';
+	        return "Press Enter to add <b>\"" + (0, _utils.stripHTML)(value) + "\"</b>";
 	      },
 	      maxItemText: function maxItemText(maxItemCount) {
-	        return 'Only ' + maxItemCount + ' values can be added.';
+	        return "Only " + maxItemCount + " values can be added.";
 	      },
 	      itemComparer: function itemComparer(choice, item) {
 	        return choice === item;
 	      },
-	      uniqueItemText: 'Only unique values can be added.',
+	      uniqueItemText: "Only unique values can be added.",
 	      classNames: {
-	        containerOuter: 'choices',
-	        containerInner: 'choices__inner',
-	        input: 'choices__input',
-	        inputCloned: 'choices__input--cloned',
-	        list: 'choices__list',
-	        listItems: 'choices__list--multiple',
-	        listSingle: 'choices__list--single',
-	        listDropdown: 'choices__list--dropdown',
-	        item: 'choices__item',
-	        itemSelectable: 'choices__item--selectable',
-	        itemDisabled: 'choices__item--disabled',
-	        itemChoice: 'choices__item--choice',
-	        placeholder: 'choices__placeholder',
-	        group: 'choices__group',
-	        groupHeading: 'choices__heading',
-	        button: 'choices__button',
-	        activeState: 'is-active',
-	        focusState: 'is-focused',
-	        openState: 'is-open',
-	        disabledState: 'is-disabled',
-	        highlightedState: 'is-highlighted',
-	        hiddenState: 'is-hidden',
-	        flippedState: 'is-flipped',
-	        loadingState: 'is-loading',
-	        noResults: 'has-no-results',
-	        noChoices: 'has-no-choices'
+	        containerOuter: "choices",
+	        containerInner: "choices__inner",
+	        input: "choices__input",
+	        inputCloned: "choices__input--cloned",
+	        list: "choices__list",
+	        listItems: "choices__list--multiple",
+	        listSingle: "choices__list--single",
+	        listDropdown: "choices__list--dropdown",
+	        item: "choices__item",
+	        itemSelectable: "choices__item--selectable",
+	        itemDisabled: "choices__item--disabled",
+	        itemChoice: "choices__item--choice",
+	        placeholder: "choices__placeholder",
+	        group: "choices__group",
+	        groupHeading: "choices__heading",
+	        button: "choices__button",
+	        activeState: "is-active",
+	        focusState: "is-focused",
+	        openState: "is-open",
+	        disabledState: "is-disabled",
+	        highlightedState: "is-highlighted",
+	        hiddenState: "is-hidden",
+	        flippedState: "is-flipped",
+	        loadingState: "is-loading",
+	        noResults: "has-no-results",
+	        noChoices: "has-no-choices"
 	      },
 	      fuseOptions: {
-	        include: 'score'
+	        include: "score"
 	      },
 	      callbackOnInit: null,
 	      callbackOnCreateTemplates: null
 	    };
 
 	    this.idNames = {
-	      itemChoice: 'item-choice'
+	      itemChoice: "item-choice"
 	    };
 
 	    // Merge options with user options
 	    this.config = (0, _utils.extend)(defaultConfig, userConfig);
 
-	    if (this.config.renderSelectedChoices !== 'auto' && this.config.renderSelectedChoices !== 'always') {
+	    if (this.config.renderSelectedChoices !== "auto" && this.config.renderSelectedChoices !== "always") {
 	      if (!this.config.silent) {
-	        console.warn('renderSelectedChoices: Possible values are \'auto\' and \'always\'. Falling back to \'auto\'.');
+	        console.warn("renderSelectedChoices: Possible values are 'auto' and 'always'. Falling back to 'auto'.");
 	      }
-	      this.config.renderSelectedChoices = 'auto';
+	      this.config.renderSelectedChoices = "auto";
 	    }
 
 	    // Create data store
@@ -214,22 +214,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.initialised = false;
 	    this.currentState = {};
 	    this.prevState = {};
-	    this.currentValue = '';
+	    this.currentValue = "";
 
 	    // Retrieve triggering element (i.e. element with 'data-choice' trigger)
 	    this.element = element;
-	    this.passedElement = (0, _utils.isType)('String', element) ? document.querySelector(element) : element;
+	    this.passedElement = (0, _utils.isType)("String", element) ? document.querySelector(element) : element;
 
 	    if (!this.passedElement) {
 	      if (!this.config.silent) {
-	        console.error('Passed element not found');
+	        console.error("Passed element not found");
 	      }
 	      return;
 	    }
 
-	    this.isTextElement = this.passedElement.type === 'text';
-	    this.isSelectOneElement = this.passedElement.type === 'select-one';
-	    this.isSelectMultipleElement = this.passedElement.type === 'select-multiple';
+	    this.isTextElement = this.passedElement.type === "text";
+	    this.isSelectOneElement = this.passedElement.type === "select-one";
+	    this.isSelectMultipleElement = this.passedElement.type === "select-multiple";
 	    this.isSelectElement = this.isSelectOneElement || this.isSelectMultipleElement;
 	    this.isValidElementType = this.isTextElement || this.isSelectElement;
 	    this.isIe11 = !!(navigator.userAgent.match(/Trident/) && navigator.userAgent.match(/rv[ :]11/));
@@ -237,7 +237,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    if (this.config.shouldSortItems === true && this.isSelectOneElement) {
 	      if (!this.config.silent) {
-	        console.warn('shouldSortElements: Type of passed element is \'select-one\', falling back to false.');
+	        console.warn("shouldSortElements: Type of passed element is 'select-one', falling back to false.");
 	      }
 	    }
 
@@ -246,7 +246,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    this.placeholder = false;
 	    if (!this.isSelectOneElement) {
-	      this.placeholder = this.config.placeholder ? this.config.placeholderValue || this.passedElement.getAttribute('placeholder') : false;
+	      this.placeholder = this.config.placeholder ? this.config.placeholderValue || this.passedElement.getAttribute("placeholder") : false;
 	    }
 
 	    // Assign preset choices from passed object
@@ -261,7 +261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    // Set unique base Id
-	    this.baseId = (0, _utils.generateId)(this.passedElement, 'choices-');
+	    this.baseId = (0, _utils.generateId)(this.passedElement, "choices-");
 
 	    // Bind methods
 	    this.render = this.render.bind(this);
@@ -283,23 +283,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.wasTap = true;
 
 	    // Cutting the mustard
-	    var cuttingTheMustard = 'classList' in document.documentElement;
+	    var cuttingTheMustard = "classList" in document.documentElement;
 	    if (!cuttingTheMustard && !this.config.silent) {
-	      console.error('Choices: Your browser doesn\'t support Choices');
+	      console.error("Choices: Your browser doesn't support Choices");
 	    }
 
 	    var canInit = (0, _utils.isElement)(this.passedElement) && this.isValidElementType;
 
 	    if (canInit) {
 	      // If element has already been initialised with Choices
-	      if (this.passedElement.getAttribute('data-choice') === 'active') {
+	      if (this.passedElement.getAttribute("data-choice") === "active") {
 	        return;
 	      }
 
 	      // Let's go
 	      this.init();
 	    } else if (!this.config.silent) {
-	      console.error('Incompatible input passed');
+	      console.error("Incompatible input passed");
 	    }
 	  }
 
@@ -315,7 +315,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	  _createClass(Choices, [{
-	    key: 'init',
+	    key: "init",
 	    value: function init() {
 	      if (this.initialised === true) {
 	        return;
@@ -338,7 +338,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      // Run callback if it is a function
 	      if (callback) {
-	        if ((0, _utils.isType)('Function', callback)) {
+	        if ((0, _utils.isType)("Function", callback)) {
 	          callback.call(this);
 	        }
 	      }
@@ -351,7 +351,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'destroy',
+	    key: "destroy",
 	    value: function destroy() {
 	      if (this.initialised === false) {
 	        return;
@@ -362,17 +362,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      // Reinstate passed element
 	      this.passedElement.classList.remove(this.config.classNames.input, this.config.classNames.hiddenState);
-	      this.passedElement.removeAttribute('tabindex');
+	      this.passedElement.removeAttribute("tabindex");
 	      // Recover original styles if any
-	      var origStyle = this.passedElement.getAttribute('data-choice-orig-style');
+	      var origStyle = this.passedElement.getAttribute("data-choice-orig-style");
 	      if (Boolean(origStyle)) {
-	        this.passedElement.removeAttribute('data-choice-orig-style');
-	        this.passedElement.setAttribute('style', origStyle);
+	        this.passedElement.removeAttribute("data-choice-orig-style");
+	        this.passedElement.setAttribute("style", origStyle);
 	      } else {
-	        this.passedElement.removeAttribute('style');
+	        this.passedElement.removeAttribute("style");
 	      }
-	      this.passedElement.removeAttribute('aria-hidden');
-	      this.passedElement.removeAttribute('data-choice');
+	      this.passedElement.removeAttribute("aria-hidden");
+	      this.passedElement.removeAttribute("data-choice");
 
 	      // Re-assign values - this is weird, I know
 	      this.passedElement.value = this.passedElement.value;
@@ -402,7 +402,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'renderGroups',
+	    key: "renderGroups",
 	    value: function renderGroups(groups, choices, fragment) {
 	      var _this = this;
 
@@ -424,7 +424,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 
 	        if (groupChoices.length >= 1) {
-	          var dropdownGroup = _this._getTemplate('choiceGroup', group);
+	          var dropdownGroup = _this._getTemplate("choiceGroup", group);
 	          groupFragment.appendChild(dropdownGroup);
 	          _this.renderChoices(groupChoices, groupFragment, true);
 	        }
@@ -442,7 +442,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'renderChoices',
+	    key: "renderChoices",
 	    value: function renderChoices(choices, fragment) {
 	      var _this2 = this;
 
@@ -457,16 +457,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var filter = this.isSearching ? _utils.sortByScore : this.config.sortFilter;
 	      var appendChoice = function appendChoice(choice) {
-	        var shouldRender = renderSelectedChoices === 'auto' ? _this2.isSelectOneElement || !choice.selected : true;
+	        var shouldRender = renderSelectedChoices === "auto" ? _this2.isSelectOneElement || !choice.selected : true;
 	        if (shouldRender) {
-	          var dropdownItem = _this2._getTemplate('choice', choice);
+	          var dropdownItem = _this2._getTemplate("choice", choice);
 	          choicesFragment.appendChild(dropdownItem);
 	        }
 	      };
 
 	      var rendererableChoices = choices;
 
-	      if (renderSelectedChoices === 'auto' && !this.isSelectOneElement) {
+	      if (renderSelectedChoices === "auto" && !this.isSelectOneElement) {
 	        rendererableChoices = choices.filter(function (choice) {
 	          return !choice.selected;
 	        });
@@ -508,8 +508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (sortedChoices[i]) {
 	          appendChoice(sortedChoices[i]);
 	        }
-	      };
-
+	      }
 	      return choicesFragment;
 	    }
 
@@ -522,7 +521,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'renderItems',
+	    key: "renderItems",
 	    value: function renderItems(items) {
 	      var _this3 = this;
 
@@ -541,7 +540,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var itemsFiltered = this.store.getItemsReducedToValues(items);
 	        var itemsFilteredString = itemsFiltered.join(this.config.delimiter);
 	        // Update the value of the hidden input
-	        this.passedElement.setAttribute('value', itemsFilteredString);
+	        this.passedElement.setAttribute("value", itemsFilteredString);
 	        this.passedElement.value = itemsFilteredString;
 	      } else {
 	        var selectedOptionsFragment = document.createDocumentFragment();
@@ -549,20 +548,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // Add each list item to list
 	        items.forEach(function (item) {
 	          // Create a standard select option
-	          var option = _this3._getTemplate('option', item);
+	          var option = _this3._getTemplate("option", item);
 	          // Append it to fragment
 	          selectedOptionsFragment.appendChild(option);
 	        });
 
 	        // Update selected choices
-	        this.passedElement.innerHTML = '';
+	        this.passedElement.innerHTML = "";
 	        this.passedElement.appendChild(selectedOptionsFragment);
 	      }
 
 	      // Add each list item to list
 	      items.forEach(function (item) {
 	        // Create new list element
-	        var listItem = _this3._getTemplate('item', item);
+	        var listItem = _this3._getTemplate("item", item);
 	        // Append it to list
 	        itemListFragment.appendChild(listItem);
 	      });
@@ -577,7 +576,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      if (this.store.isLoading()) {
 	        return;
@@ -597,7 +596,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var choiceListFragment = document.createDocumentFragment();
 
 	            // Clear choices
-	            this.choiceList.innerHTML = '';
+	            this.choiceList.innerHTML = "";
 
 	            // Scroll back to top of choices list
 	            if (this.config.resetScrollPosition) {
@@ -623,7 +622,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                this._highlightChoice();
 	              } else {
 	                // ...otherwise show a notice
-	                this.choiceList.appendChild(this._getTemplate('notice', canAddItem.notice));
+	                this.choiceList.appendChild(this._getTemplate("notice", canAddItem.notice));
 	              }
 	            } else {
 	              // Otherwise show a notice
@@ -631,13 +630,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	              var notice = void 0;
 
 	              if (this.isSearching) {
-	                notice = (0, _utils.isType)('Function', this.config.noResultsText) ? this.config.noResultsText() : this.config.noResultsText;
+	                notice = (0, _utils.isType)("Function", this.config.noResultsText) ? this.config.noResultsText() : this.config.noResultsText;
 
-	                dropdownItem = this._getTemplate('notice', notice, 'no-results');
+	                dropdownItem = this._getTemplate("notice", notice, "no-results");
 	              } else {
-	                notice = (0, _utils.isType)('Function', this.config.noChoicesText) ? this.config.noChoicesText() : this.config.noChoicesText;
+	                notice = (0, _utils.isType)("Function", this.config.noChoicesText) ? this.config.noChoicesText() : this.config.noChoicesText;
 
-	                dropdownItem = this._getTemplate('notice', notice, 'no-choices');
+	                dropdownItem = this._getTemplate("notice", notice, "no-choices");
 	              }
 
 	              this.choiceList.appendChild(dropdownItem);
@@ -651,7 +650,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          var _activeItems = this.store.getItemsFilteredByActive();
 
 	          // Clear list
-	          this.itemList.innerHTML = '';
+	          this.itemList.innerHTML = "";
 
 	          if (_activeItems && _activeItems) {
 	            // Create a fragment to store our list items
@@ -679,7 +678,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'highlightItem',
+	    key: "highlightItem",
 	    value: function highlightItem(item) {
 	      var runEvent = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
@@ -695,14 +694,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      if (runEvent) {
 	        if (group && group.value) {
-	          (0, _utils.triggerEvent)(this.passedElement, 'highlightItem', {
+	          (0, _utils.triggerEvent)(this.passedElement, "highlightItem", {
 	            id: id,
 	            value: item.value,
 	            label: item.label,
 	            groupValue: group.value
 	          });
 	        } else {
-	          (0, _utils.triggerEvent)(this.passedElement, 'highlightItem', {
+	          (0, _utils.triggerEvent)(this.passedElement, "highlightItem", {
 	            id: id,
 	            value: item.value,
 	            label: item.label
@@ -721,7 +720,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'unhighlightItem',
+	    key: "unhighlightItem",
 	    value: function unhighlightItem(item) {
 	      if (!item) {
 	        return this;
@@ -734,14 +733,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.store.dispatch((0, _index3.highlightItem)(id, false));
 
 	      if (group && group.value) {
-	        (0, _utils.triggerEvent)(this.passedElement, 'unhighlightItem', {
+	        (0, _utils.triggerEvent)(this.passedElement, "unhighlightItem", {
 	          id: id,
 	          value: item.value,
 	          label: item.label,
 	          groupValue: group.value
 	        });
 	      } else {
-	        (0, _utils.triggerEvent)(this.passedElement, 'unhighlightItem', {
+	        (0, _utils.triggerEvent)(this.passedElement, "unhighlightItem", {
 	          id: id,
 	          value: item.value,
 	          label: item.label
@@ -758,7 +757,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'highlightAll',
+	    key: "highlightAll",
 	    value: function highlightAll() {
 	      var _this4 = this;
 
@@ -777,7 +776,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'unhighlightAll',
+	    key: "unhighlightAll",
 	    value: function unhighlightAll() {
 	      var _this5 = this;
 
@@ -797,11 +796,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'removeItemsByValue',
+	    key: "removeItemsByValue",
 	    value: function removeItemsByValue(value) {
 	      var _this6 = this;
 
-	      if (!value || !(0, _utils.isType)('String', value)) {
+	      if (!value || !(0, _utils.isType)("String", value)) {
 	        return this;
 	      }
 
@@ -825,7 +824,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'removeActiveItems',
+	    key: "removeActiveItems",
 	    value: function removeActiveItems(excludedId) {
 	      var _this7 = this;
 
@@ -848,7 +847,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'removeHighlightedItems',
+	    key: "removeHighlightedItems",
 	    value: function removeHighlightedItems() {
 	      var _this8 = this;
 
@@ -877,7 +876,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'showDropdown',
+	    key: "showDropdown",
 	    value: function showDropdown() {
 	      var focusInput = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
@@ -886,18 +885,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var winHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 	      this.containerOuter.classList.add(this.config.classNames.openState);
-	      this.containerOuter.setAttribute('aria-expanded', 'true');
+	      this.containerOuter.setAttribute("aria-expanded", "true");
 	      this.dropdown.classList.add(this.config.classNames.activeState);
-	      this.dropdown.setAttribute('aria-expanded', 'true');
+	      this.dropdown.setAttribute("aria-expanded", "true");
 
 	      var dimensions = this.dropdown.getBoundingClientRect();
 	      var dropdownPos = Math.ceil(dimensions.top + window.scrollY + this.dropdown.offsetHeight);
 
 	      // If flip is enabled and the dropdown bottom position is greater than the window height flip the dropdown.
 	      var shouldFlip = false;
-	      if (this.config.position === 'auto') {
+	      if (this.config.position === "auto") {
 	        shouldFlip = dropdownPos >= winHeight;
-	      } else if (this.config.position === 'top') {
+	      } else if (this.config.position === "top") {
 	        shouldFlip = true;
 	      }
 
@@ -910,7 +909,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.input.focus();
 	      }
 
-	      (0, _utils.triggerEvent)(this.passedElement, 'showDropdown', {});
+	      (0, _utils.triggerEvent)(this.passedElement, "showDropdown", {});
 
 	      return this;
 	    }
@@ -922,7 +921,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'hideDropdown',
+	    key: "hideDropdown",
 	    value: function hideDropdown() {
 	      var blurInput = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
@@ -930,9 +929,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var isFlipped = this.containerOuter.classList.contains(this.config.classNames.flippedState);
 
 	      this.containerOuter.classList.remove(this.config.classNames.openState);
-	      this.containerOuter.setAttribute('aria-expanded', 'false');
+	      this.containerOuter.setAttribute("aria-expanded", "false");
 	      this.dropdown.classList.remove(this.config.classNames.activeState);
-	      this.dropdown.setAttribute('aria-expanded', 'false');
+	      this.dropdown.setAttribute("aria-expanded", "false");
 
 	      if (isFlipped) {
 	        this.containerOuter.classList.remove(this.config.classNames.flippedState);
@@ -943,7 +942,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.input.blur();
 	      }
 
-	      (0, _utils.triggerEvent)(this.passedElement, 'hideDropdown', {});
+	      (0, _utils.triggerEvent)(this.passedElement, "hideDropdown", {});
 
 	      return this;
 	    }
@@ -955,7 +954,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'toggleDropdown',
+	    key: "toggleDropdown",
 	    value: function toggleDropdown() {
 	      var hasActiveDropdown = this.dropdown.classList.contains(this.config.classNames.activeState);
 	      if (hasActiveDropdown) {
@@ -975,7 +974,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'getValue',
+	    key: "getValue",
 	    value: function getValue() {
 	      var _this9 = this;
 
@@ -1008,7 +1007,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'setValue',
+	    key: "setValue",
 	    value: function setValue(args) {
 	      var _this10 = this;
 
@@ -1017,7 +1016,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var values = [].concat(_toConsumableArray(args)),
 	            handleValue = function handleValue(item) {
 	          var itemType = (0, _utils.getType)(item);
-	          if (itemType === 'Object') {
+	          if (itemType === "Object") {
 	            if (!item.value) {
 	              return;
 	            }
@@ -1029,7 +1028,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            } else {
 	              _this10._addItem(item.value, item.label, item.id, undefined, item.customProperties, item.placeholder);
 	            }
-	          } else if (itemType === 'String') {
+	          } else if (itemType === "String") {
 	            if (!_this10.isTextElement) {
 	              _this10._addChoice(item, item, true, false, -1, null);
 	            } else {
@@ -1057,14 +1056,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'setValueByChoice',
+	    key: "setValueByChoice",
 	    value: function setValueByChoice(value) {
 	      var _this11 = this;
 
 	      if (!this.isTextElement) {
 	        var choices = this.store.getChoices();
 	        // If only one value has been passed, convert to array
-	        var choiceValue = (0, _utils.isType)('Array', value) ? value : [value];
+	        var choiceValue = (0, _utils.isType)("Array", value) ? value : [value];
 
 	        // Loop through each value and
 	        choiceValue.forEach(function (val) {
@@ -1077,10 +1076,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	            if (!foundChoice.selected) {
 	              _this11._addItem(foundChoice.value, foundChoice.label, foundChoice.id, foundChoice.groupId, foundChoice.customProperties, foundChoice.placeholder, foundChoice.keyCode);
 	            } else if (!_this11.config.silent) {
-	              console.warn('Attempting to select choice already selected');
+	              console.warn("Attempting to select choice already selected");
 	            }
 	          } else if (!_this11.config.silent) {
-	            console.warn('Attempting to select choice that does not exist');
+	            console.warn("Attempting to select choice that does not exist");
 	          }
 	        });
 	      }
@@ -1098,7 +1097,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'setChoices',
+	    key: "setChoices",
 	    value: function setChoices(choices, value, label) {
 	      var _this12 = this;
 
@@ -1106,7 +1105,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      if (this.initialised === true) {
 	        if (this.isSelectElement) {
-	          if (!(0, _utils.isType)('Array', choices) || !value) {
+	          if (!(0, _utils.isType)("Array", choices) || !value) {
 	            return this;
 	          }
 
@@ -1143,7 +1142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'clearStore',
+	    key: "clearStore",
 	    value: function clearStore() {
 	      this.store.dispatch((0, _index3.clearAll)());
 	      return this;
@@ -1156,10 +1155,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'clearInput',
+	    key: "clearInput",
 	    value: function clearInput() {
 	      if (this.input.value) {
-	        this.input.value = '';
+	        this.input.value = "";
 	      }
 	      if (!this.isSelectOneElement) {
 	        this._setInputWidth();
@@ -1177,19 +1176,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'enable',
+	    key: "enable",
 	    value: function enable() {
 	      if (this.initialised) {
 	        this.passedElement.disabled = false;
 	        var isDisabled = this.containerOuter.classList.contains(this.config.classNames.disabledState);
 	        if (isDisabled) {
 	          this._addEventListeners();
-	          this.passedElement.removeAttribute('disabled');
-	          this.input.removeAttribute('disabled');
+	          this.passedElement.removeAttribute("disabled");
+	          this.input.removeAttribute("disabled");
 	          this.containerOuter.classList.remove(this.config.classNames.disabledState);
-	          this.containerOuter.removeAttribute('aria-disabled');
+	          this.containerOuter.removeAttribute("aria-disabled");
 	          if (this.isSelectOneElement) {
-	            this.containerOuter.setAttribute('tabindex', '0');
+	            this.containerOuter.setAttribute("tabindex", "0");
 	          }
 	        }
 	      }
@@ -1203,19 +1202,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'disable',
+	    key: "disable",
 	    value: function disable() {
 	      if (this.initialised) {
 	        this.passedElement.disabled = true;
 	        var isEnabled = !this.containerOuter.classList.contains(this.config.classNames.disabledState);
 	        if (isEnabled) {
 	          this._removeEventListeners();
-	          this.passedElement.setAttribute('disabled', '');
-	          this.input.setAttribute('disabled', '');
+	          this.passedElement.setAttribute("disabled", "");
+	          this.input.setAttribute("disabled", "");
 	          this.containerOuter.classList.add(this.config.classNames.disabledState);
-	          this.containerOuter.setAttribute('aria-disabled', 'true');
+	          this.containerOuter.setAttribute("aria-disabled", "true");
 	          if (this.isSelectOneElement) {
-	            this.containerOuter.setAttribute('tabindex', '-1');
+	            this.containerOuter.setAttribute("tabindex", "-1");
 	          }
 	        }
 	      }
@@ -1230,7 +1229,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: 'ajax',
+	    key: "ajax",
 	    value: function ajax(fn) {
 	      var _this13 = this;
 
@@ -1261,13 +1260,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_triggerChange',
+	    key: "_triggerChange",
 	    value: function _triggerChange(value) {
 	      if (!value) {
 	        return;
 	      }
 
-	      (0, _utils.triggerEvent)(this.passedElement, 'change', {
+	      (0, _utils.triggerEvent)(this.passedElement, "change", {
 	        value: value
 	      });
 	    }
@@ -1281,7 +1280,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_handleButtonAction',
+	    key: "_handleButtonAction",
 	    value: function _handleButtonAction(activeItems, element) {
 	      if (!activeItems || !element) {
 	        return;
@@ -1289,7 +1288,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      // If we are clicking on a button
 	      if (this.config.removeItems && this.config.removeItemButton) {
-	        var itemId = element.parentNode.getAttribute('data-id');
+	        var itemId = element.parentNode.getAttribute("data-id");
 	        var itemToRemove = activeItems.find(function (item) {
 	          return item.id === parseInt(itemId, 10);
 	        });
@@ -1309,7 +1308,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_selectPlaceholderChoice',
+	    key: "_selectPlaceholderChoice",
 	    value: function _selectPlaceholderChoice() {
 	      var placeholderChoice = this.store.getPlaceholderChoice();
 
@@ -1329,7 +1328,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_handleItemAction',
+	    key: "_handleItemAction",
 	    value: function _handleItemAction(activeItems, element) {
 	      var _this14 = this;
 
@@ -1341,7 +1340,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      // If we are clicking on an item
 	      if (this.config.removeItems && !this.isSelectOneElement) {
-	        var passedId = element.getAttribute('data-id');
+	        var passedId = element.getAttribute("data-id");
 
 	        // We only want to select one item with a click
 	        // so we deselect any items that aren't the target
@@ -1372,14 +1371,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_handleChoiceAction',
+	    key: "_handleChoiceAction",
 	    value: function _handleChoiceAction(activeItems, element) {
 	      if (!activeItems || !element) {
 	        return;
 	      }
 
 	      // If we are clicking on an option
-	      var id = element.getAttribute('data-id');
+	      var id = element.getAttribute("data-id");
 	      var choice = this.store.getChoiceById(id);
 	      var passedKeyCode = activeItems[0] && activeItems[0].keyCode ? activeItems[0].keyCode : null;
 	      var hasActiveDropdown = this.dropdown.classList.contains(this.config.classNames.activeState);
@@ -1387,7 +1386,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // Update choice keyCode
 	      choice.keyCode = passedKeyCode;
 
-	      (0, _utils.triggerEvent)(this.passedElement, 'choice', {
+	      (0, _utils.triggerEvent)(this.passedElement, "choice", {
 	        choice: choice
 	      });
 
@@ -1417,7 +1416,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_handleBackspace',
+	    key: "_handleBackspace",
 	    value: function _handleBackspace(activeItems) {
 	      if (this.config.removeItems && activeItems) {
 	        var lastItem = activeItems[activeItems.length - 1];
@@ -1450,17 +1449,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_canAddItem',
+	    key: "_canAddItem",
 	    value: function _canAddItem(activeItems, value) {
 	      var canAddItem = true;
-	      var notice = (0, _utils.isType)('Function', this.config.addItemText) ? this.config.addItemText(value) : this.config.addItemText;
+	      var notice = (0, _utils.isType)("Function", this.config.addItemText) ? this.config.addItemText(value) : this.config.addItemText;
 
 	      if (this.isSelectMultipleElement || this.isTextElement) {
 	        if (this.config.maxItemCount > 0 && this.config.maxItemCount <= activeItems.length) {
 	          // If there is a max entry limit and we have reached that limit
 	          // don't update
 	          canAddItem = false;
-	          notice = (0, _utils.isType)('Function', this.config.maxItemText) ? this.config.maxItemText(this.config.maxItemCount) : this.config.maxItemText;
+	          notice = (0, _utils.isType)("Function", this.config.maxItemText) ? this.config.maxItemText(this.config.maxItemCount) : this.config.maxItemText;
 	        }
 	      }
 
@@ -1476,7 +1475,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // If no duplicates are allowed, and the value already exists
 	      // in the array
 	      var isUnique = !activeItems.some(function (item) {
-	        if ((0, _utils.isType)('String', value)) {
+	        if ((0, _utils.isType)("String", value)) {
 	          return item.value === value.trim();
 	        }
 
@@ -1485,7 +1484,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      if (!isUnique && !this.config.duplicateItems && !this.isSelectOneElement && canAddItem) {
 	        canAddItem = false;
-	        notice = (0, _utils.isType)('Function', this.config.uniqueItemText) ? this.config.uniqueItemText(value) : this.config.uniqueItemText;
+	        notice = (0, _utils.isType)("Function", this.config.uniqueItemText) ? this.config.uniqueItemText(value) : this.config.uniqueItemText;
 	      }
 
 	      return {
@@ -1502,17 +1501,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_handleLoadingState',
+	    key: "_handleLoadingState",
 	    value: function _handleLoadingState() {
 	      var setLoading = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
-	      var placeholderItem = this.itemList.querySelector('.' + this.config.classNames.placeholder);
+	      var placeholderItem = this.itemList.querySelector("." + this.config.classNames.placeholder);
 	      if (setLoading) {
 	        this.containerOuter.classList.add(this.config.classNames.loadingState);
-	        this.containerOuter.setAttribute('aria-busy', 'true');
+	        this.containerOuter.setAttribute("aria-busy", "true");
 	        if (this.isSelectOneElement) {
 	          if (!placeholderItem) {
-	            placeholderItem = this._getTemplate('placeholder', this.config.loadingText);
+	            placeholderItem = this._getTemplate("placeholder", this.config.loadingText);
 	            this.itemList.appendChild(placeholderItem);
 	          } else {
 	            placeholderItem.innerHTML = this.config.loadingText;
@@ -1525,9 +1524,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.containerOuter.classList.remove(this.config.classNames.loadingState);
 
 	        if (this.isSelectOneElement) {
-	          placeholderItem.innerHTML = this.placeholder || '';
+	          placeholderItem.innerHTML = this.placeholder || "";
 	        } else {
-	          this.input.placeholder = this.placeholder || '';
+	          this.input.placeholder = this.placeholder || "";
 	        }
 	      }
 	    }
@@ -1539,7 +1538,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_ajaxCallback',
+	    key: "_ajaxCallback",
 	    value: function _ajaxCallback() {
 	      var _this15 = this;
 
@@ -1548,9 +1547,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	          return;
 	        }
 
-	        var parsedResults = (0, _utils.isType)('Object', results) ? [results] : results;
+	        var parsedResults = (0, _utils.isType)("Object", results) ? [results] : results;
 
-	        if (parsedResults && (0, _utils.isType)('Array', parsedResults) && parsedResults.length) {
+	        if (parsedResults && (0, _utils.isType)("Array", parsedResults) && parsedResults.length) {
 	          // Remove loading states/text
 	          _this15._handleLoadingState(false);
 	          // Add each result as a choice
@@ -1576,7 +1575,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _this15._handleLoadingState(false);
 	        }
 
-	        _this15.containerOuter.removeAttribute('aria-busy');
+	        _this15.containerOuter.removeAttribute("aria-busy");
 	      };
 	    }
 
@@ -1588,16 +1587,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_searchChoices',
+	    key: "_searchChoices",
 	    value: function _searchChoices(value) {
-	      var newValue = (0, _utils.isType)('String', value) ? value.trim() : value;
-	      var currentValue = (0, _utils.isType)('String', this.currentValue) ? this.currentValue.trim() : this.currentValue;
+	      var newValue = (0, _utils.isType)("String", value) ? value.trim() : value;
+	      var currentValue = (0, _utils.isType)("String", this.currentValue) ? this.currentValue.trim() : this.currentValue;
 
 	      // If new value matches the desired length and is not the same as the current value with a space
-	      if (newValue.length >= 1 && newValue !== currentValue + ' ') {
+	      if (newValue.length >= 1 && newValue !== currentValue + " ") {
 	        var haystack = this.store.getSearchableChoices();
 	        var needle = newValue;
-	        var keys = (0, _utils.isType)('Array', this.config.searchFields) ? this.config.searchFields : [this.config.searchFields];
+	        var keys = (0, _utils.isType)("Array", this.config.searchFields) ? this.config.searchFields : [this.config.searchFields];
 	        var options = Object.assign(this.config.fuseOptions, { keys: keys });
 	        var fuse = new _fuse2.default(haystack, options);
 	        var results = fuse.search(needle);
@@ -1621,7 +1620,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_handleSearch',
+	    key: "_handleSearch",
 	    value: function _handleSearch(value) {
 	      if (!value) {
 	        return;
@@ -1643,7 +1642,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            resultCount = this._searchChoices(value);
 	          }
 	          // Trigger search event
-	          (0, _utils.triggerEvent)(this.passedElement, 'search', {
+	          (0, _utils.triggerEvent)(this.passedElement, "search", {
 	            value: value,
 	            resultCount: resultCount
 	          });
@@ -1662,25 +1661,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_addEventListeners',
+	    key: "_addEventListeners",
 	    value: function _addEventListeners() {
-	      document.addEventListener('keyup', this._onKeyUp);
-	      document.addEventListener('keydown', this._onKeyDown);
-	      document.addEventListener('click', this._onClick);
-	      document.addEventListener('touchmove', this._onTouchMove);
-	      document.addEventListener('touchend', this._onTouchEnd);
-	      document.addEventListener('mousedown', this._onMouseDown);
-	      document.addEventListener('mouseover', this._onMouseOver);
+	      document.addEventListener("keyup", this._onKeyUp);
+	      document.addEventListener("keydown", this._onKeyDown);
+	      document.addEventListener("click", this._onClick);
+	      document.addEventListener("touchmove", this._onTouchMove);
+	      document.addEventListener("touchend", this._onTouchEnd);
+	      document.addEventListener("mousedown", this._onMouseDown);
+	      document.addEventListener("mouseover", this._onMouseOver);
 
 	      if (this.isSelectOneElement) {
-	        this.containerOuter.addEventListener('focus', this._onFocus);
-	        this.containerOuter.addEventListener('blur', this._onBlur);
+	        this.containerOuter.addEventListener("focus", this._onFocus);
+	        this.containerOuter.addEventListener("blur", this._onBlur);
 	      }
 
-	      this.input.addEventListener('input', this._onInput);
-	      this.input.addEventListener('paste', this._onPaste);
-	      this.input.addEventListener('focus', this._onFocus);
-	      this.input.addEventListener('blur', this._onBlur);
+	      this.input.addEventListener("input", this._onInput);
+	      this.input.addEventListener("paste", this._onPaste);
+	      this.input.addEventListener("focus", this._onFocus);
+	      this.input.addEventListener("blur", this._onBlur);
 	    }
 
 	    /**
@@ -1690,25 +1689,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_removeEventListeners',
+	    key: "_removeEventListeners",
 	    value: function _removeEventListeners() {
-	      document.removeEventListener('keyup', this._onKeyUp);
-	      document.removeEventListener('keydown', this._onKeyDown);
-	      document.removeEventListener('click', this._onClick);
-	      document.removeEventListener('touchmove', this._onTouchMove);
-	      document.removeEventListener('touchend', this._onTouchEnd);
-	      document.removeEventListener('mousedown', this._onMouseDown);
-	      document.removeEventListener('mouseover', this._onMouseOver);
+	      document.removeEventListener("keyup", this._onKeyUp);
+	      document.removeEventListener("keydown", this._onKeyDown);
+	      document.removeEventListener("click", this._onClick);
+	      document.removeEventListener("touchmove", this._onTouchMove);
+	      document.removeEventListener("touchend", this._onTouchEnd);
+	      document.removeEventListener("mousedown", this._onMouseDown);
+	      document.removeEventListener("mouseover", this._onMouseOver);
 
 	      if (this.isSelectOneElement) {
-	        this.containerOuter.removeEventListener('focus', this._onFocus);
-	        this.containerOuter.removeEventListener('blur', this._onBlur);
+	        this.containerOuter.removeEventListener("focus", this._onFocus);
+	        this.containerOuter.removeEventListener("blur", this._onBlur);
 	      }
 
-	      this.input.removeEventListener('input', this._onInput);
-	      this.input.removeEventListener('paste', this._onPaste);
-	      this.input.removeEventListener('focus', this._onFocus);
-	      this.input.removeEventListener('blur', this._onBlur);
+	      this.input.removeEventListener("input", this._onInput);
+	      this.input.removeEventListener("paste", this._onPaste);
+	      this.input.removeEventListener("focus", this._onFocus);
+	      this.input.removeEventListener("blur", this._onBlur);
 	    }
 
 	    /**
@@ -1718,7 +1717,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_setInputWidth',
+	    key: "_setInputWidth",
 	    value: function _setInputWidth() {
 	      if (this.placeholder) {
 	        // If there is a placeholder, we only want to set the width of the input when it is a greater
@@ -1739,7 +1738,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onKeyDown',
+	    key: "_onKeyDown",
 	    value: function _onKeyDown(e) {
 	      var _this16 = this,
 	          _keyDownActions;
@@ -1801,14 +1800,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }
 	        }
 
-	        if (target.hasAttribute('data-button')) {
+	        if (target.hasAttribute("data-button")) {
 	          _this16._handleButtonAction(activeItems, target);
 	          e.preventDefault();
 	        }
 
 	        if (hasActiveDropdown) {
 	          e.preventDefault();
-	          var highlighted = _this16.dropdown.querySelector('.' + _this16.config.classNames.highlightedState);
+	          var highlighted = _this16.dropdown.querySelector("." + _this16.config.classNames.highlightedState);
 
 	          // If we have a highlighted choice
 	          if (highlighted) {
@@ -1850,16 +1849,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	          var nextEl = void 0;
 	          if (skipKey) {
 	            if (directionInt > 0) {
-	              nextEl = Array.from(_this16.dropdown.querySelectorAll('[data-choice-selectable]')).pop();
+	              nextEl = Array.from(_this16.dropdown.querySelectorAll("[data-choice-selectable]")).pop();
 	            } else {
-	              nextEl = _this16.dropdown.querySelector('[data-choice-selectable]');
+	              nextEl = _this16.dropdown.querySelector("[data-choice-selectable]");
 	            }
 	          } else {
-	            var currentEl = _this16.dropdown.querySelector('.' + _this16.config.classNames.highlightedState);
+	            var currentEl = _this16.dropdown.querySelector("." + _this16.config.classNames.highlightedState);
 	            if (currentEl) {
-	              nextEl = (0, _utils.getAdjacentEl)(currentEl, '[data-choice-selectable]', directionInt);
+	              nextEl = (0, _utils.getAdjacentEl)(currentEl, "[data-choice-selectable]", directionInt);
 	            } else {
-	              nextEl = _this16.dropdown.querySelector('[data-choice-selectable]');
+	              nextEl = _this16.dropdown.querySelector("[data-choice-selectable]");
 	            }
 	          }
 
@@ -1903,7 +1902,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onKeyUp',
+	    key: "_onKeyUp",
 	    value: function _onKeyUp(e) {
 	      if (e.target !== this.input) {
 	        return;
@@ -1918,9 +1917,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (this.isTextElement) {
 	        var hasActiveDropdown = this.dropdown.classList.contains(this.config.classNames.activeState);
 	        if (value) {
-
 	          if (canAddItem.notice) {
-	            var dropdownItem = this._getTemplate('notice', canAddItem.notice);
+	            var dropdownItem = this._getTemplate("notice", canAddItem.notice);
 	            this.dropdown.innerHTML = dropdownItem.outerHTML;
 	          }
 
@@ -1960,7 +1958,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onInput',
+	    key: "_onInput",
 	    value: function _onInput() {
 	      if (!this.isSelectOneElement) {
 	        this._setInputWidth();
@@ -1974,7 +1972,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onTouchMove',
+	    key: "_onTouchMove",
 	    value: function _onTouchMove() {
 	      if (this.wasTap === true) {
 	        this.wasTap = false;
@@ -1989,7 +1987,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onTouchEnd',
+	    key: "_onTouchEnd",
 	    value: function _onTouchEnd(e) {
 	      var target = e.target || e.touches[0].target;
 	      var hasActiveDropdown = this.dropdown.classList.contains(this.config.classNames.activeState);
@@ -2025,7 +2023,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onMouseDown',
+	    key: "_onMouseDown",
 	    value: function _onMouseDown(e) {
 	      var target = e.target;
 
@@ -2039,11 +2037,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var activeItems = this.store.getItemsFilteredByActive();
 	        var hasShiftKey = e.shiftKey;
 
-	        if (foundTarget = (0, _utils.findAncestorByAttrName)(target, 'data-button')) {
+	        if (foundTarget = (0, _utils.findAncestorByAttrName)(target, "data-button")) {
 	          this._handleButtonAction(activeItems, foundTarget);
-	        } else if (foundTarget = (0, _utils.findAncestorByAttrName)(target, 'data-item')) {
+	        } else if (foundTarget = (0, _utils.findAncestorByAttrName)(target, "data-item")) {
 	          this._handleItemAction(activeItems, foundTarget, hasShiftKey);
-	        } else if (foundTarget = (0, _utils.findAncestorByAttrName)(target, 'data-choice')) {
+	        } else if (foundTarget = (0, _utils.findAncestorByAttrName)(target, "data-choice")) {
 	          this._handleChoiceAction(activeItems, foundTarget);
 	        }
 
@@ -2059,7 +2057,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onClick',
+	    key: "_onClick",
 	    value: function _onClick(e) {
 	      var target = e.target;
 	      var hasActiveDropdown = this.dropdown.classList.contains(this.config.classNames.activeState);
@@ -2068,7 +2066,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // If target is something that concerns us
 	      if (this.containerOuter.contains(target)) {
 	        // Handle button delete
-	        if (target.hasAttribute('data-button')) {
+	        if (target.hasAttribute("data-button")) {
 	          this._handleButtonAction(activeItems, target);
 	        }
 
@@ -2116,11 +2114,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onMouseOver',
+	    key: "_onMouseOver",
 	    value: function _onMouseOver(e) {
 	      // If the dropdown is either the target or one of its children is the target
 	      if (e.target === this.dropdown || this.dropdown.contains(e.target)) {
-	        if (e.target.hasAttribute('data-choice')) this._highlightChoice(e.target);
+	        if (e.target.hasAttribute("data-choice")) this._highlightChoice(e.target);
 	      }
 	    }
 
@@ -2132,7 +2130,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onPaste',
+	    key: "_onPaste",
 	    value: function _onPaste(e) {
 	      // Disable pasting into the input if option has been set
 	      if (e.target === this.input && !this.config.paste) {
@@ -2148,7 +2146,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onFocus',
+	    key: "_onFocus",
 	    value: function _onFocus(e) {
 	      var _this17 = this;
 
@@ -2162,7 +2160,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              _this17.containerOuter.classList.add(_this17.config.classNames.focusState);
 	            }
 	          },
-	          'select-one': function selectOne() {
+	          "select-one": function selectOne() {
 	            _this17.containerOuter.classList.add(_this17.config.classNames.focusState);
 	            if (target === _this17.input) {
 	              // Show dropdown if it isn't already showing
@@ -2171,7 +2169,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              }
 	            }
 	          },
-	          'select-multiple': function selectMultiple() {
+	          "select-multiple": function selectMultiple() {
 	            if (target === _this17.input) {
 	              // If element is a select box, the focused element is the container and the dropdown
 	              // isn't already open, focus and show dropdown
@@ -2196,7 +2194,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_onBlur',
+	    key: "_onBlur",
 	    value: function _onBlur(e) {
 	      var _this18 = this;
 
@@ -2223,7 +2221,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              }
 	            }
 	          },
-	          'select-one': function selectOne() {
+	          "select-one": function selectOne() {
 	            _this18.containerOuter.classList.remove(_this18.config.classNames.focusState);
 	            if (target === _this18.containerOuter) {
 	              // Hide dropdown if it is showing
@@ -2236,7 +2234,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              _this18.hideDropdown();
 	            }
 	          },
-	          'select-multiple': function selectMultiple() {
+	          "select-multiple": function selectMultiple() {
 	            if (target === _this18.input) {
 	              // Remove the focus state
 	              _this18.containerOuter.classList.remove(_this18.config.classNames.focusState);
@@ -2270,14 +2268,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_regexFilter',
+	    key: "_regexFilter",
 	    value: function _regexFilter(value) {
 	      if (!value) {
 	        return false;
 	      }
 
 	      var regex = this.config.regexFilter;
-	      var expression = new RegExp(regex.source, 'i');
+	      var expression = new RegExp(regex.source, "i");
 	      return expression.test(value);
 	    }
 
@@ -2290,7 +2288,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_scrollToChoice',
+	    key: "_scrollToChoice",
 	    value: function _scrollToChoice(choice, direction) {
 	      var _this19 = this;
 
@@ -2352,23 +2350,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_highlightChoice',
+	    key: "_highlightChoice",
 	    value: function _highlightChoice() {
 	      var _this20 = this;
 
 	      var el = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
 	      // Highlight first element in dropdown
-	      var choices = Array.from(this.dropdown.querySelectorAll('[data-choice-selectable]'));
+	      var choices = Array.from(this.dropdown.querySelectorAll("[data-choice-selectable]"));
 	      var passedEl = el;
 
 	      if (choices && choices.length) {
-	        var highlightedChoices = Array.from(this.dropdown.querySelectorAll('.' + this.config.classNames.highlightedState));
+	        var highlightedChoices = Array.from(this.dropdown.querySelectorAll("." + this.config.classNames.highlightedState));
 
 	        // Remove any highlighted choices
 	        highlightedChoices.forEach(function (choice) {
 	          choice.classList.remove(_this20.config.classNames.highlightedState);
-	          choice.setAttribute('aria-selected', 'false');
+	          choice.setAttribute("aria-selected", "false");
 	        });
 
 	        if (passedEl) {
@@ -2390,8 +2388,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        // Highlight given option, and set accessiblity attributes
 	        passedEl.classList.add(this.config.classNames.highlightedState);
-	        passedEl.setAttribute('aria-selected', 'true');
-	        this.containerOuter.setAttribute('aria-activedescendant', passedEl.id);
+	        passedEl.setAttribute("aria-selected", "true");
+	        this.containerOuter.setAttribute("aria-activedescendant", passedEl.id);
 	      }
 	    }
 
@@ -2407,7 +2405,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_addItem',
+	    key: "_addItem",
 	    value: function _addItem(value) {
 	      var label = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 	      var choiceId = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : -1;
@@ -2416,7 +2414,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var placeholder = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : false;
 	      var keyCode = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : null;
 
-	      var passedValue = (0, _utils.isType)('String', value) ? value.trim() : value;
+	      var passedValue = (0, _utils.isType)("String", value) ? value.trim() : value;
 	      var passedKeyCode = keyCode;
 	      var items = this.store.getItems();
 	      var passedLabel = label || passedValue;
@@ -2446,7 +2444,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      // Trigger change event
 	      if (group && group.value) {
-	        (0, _utils.triggerEvent)(this.passedElement, 'addItem', {
+	        (0, _utils.triggerEvent)(this.passedElement, "addItem", {
 	          id: id,
 	          value: passedValue,
 	          label: passedLabel,
@@ -2454,7 +2452,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          keyCode: passedKeyCode
 	        });
 	      } else {
-	        (0, _utils.triggerEvent)(this.passedElement, 'addItem', {
+	        (0, _utils.triggerEvent)(this.passedElement, "addItem", {
 	          id: id,
 	          value: passedValue,
 	          label: passedLabel,
@@ -2473,9 +2471,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_removeItem',
+	    key: "_removeItem",
 	    value: function _removeItem(item) {
-	      if (!item || !(0, _utils.isType)('Object', item)) {
+	      if (!item || !(0, _utils.isType)("Object", item)) {
 	        return this;
 	      }
 
@@ -2489,14 +2487,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.store.dispatch((0, _index3.removeItem)(id, choiceId));
 
 	      if (group && group.value) {
-	        (0, _utils.triggerEvent)(this.passedElement, 'removeItem', {
+	        (0, _utils.triggerEvent)(this.passedElement, "removeItem", {
 	          id: id,
 	          value: value,
 	          label: label,
 	          groupValue: group.value
 	        });
 	      } else {
-	        (0, _utils.triggerEvent)(this.passedElement, 'removeItem', {
+	        (0, _utils.triggerEvent)(this.passedElement, "removeItem", {
 	          id: id,
 	          value: value,
 	          label: label
@@ -2519,7 +2517,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_addChoice',
+	    key: "_addChoice",
 	    value: function _addChoice(value) {
 	      var label = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 	      var isSelected = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
@@ -2529,7 +2527,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var placeholder = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
 	      var keyCode = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : null;
 
-	      if (typeof value === 'undefined' || value === null) {
+	      if (typeof value === "undefined" || value === null) {
 	        return;
 	      }
 
@@ -2537,7 +2535,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var choices = this.store.getChoices();
 	      var choiceLabel = label || value;
 	      var choiceId = choices ? choices.length + 1 : 1;
-	      var choiceElementId = this.baseId + '-' + this.idNames.itemChoice + '-' + choiceId;
+	      var choiceElementId = this.baseId + "-" + this.idNames.itemChoice + "-" + choiceId;
 
 	      this.store.dispatch((0, _index3.addChoice)(value, choiceLabel, choiceId, groupId, isDisabled, choiceElementId, customProperties, placeholder, keyCode));
 
@@ -2553,7 +2551,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_clearChoices',
+	    key: "_clearChoices",
 	    value: function _clearChoices() {
 	      this.store.dispatch((0, _index3.clearChoices)());
 	    }
@@ -2569,14 +2567,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_addGroup',
+	    key: "_addGroup",
 	    value: function _addGroup(group, id) {
 	      var _this21 = this;
 
-	      var valueKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'value';
-	      var labelKey = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'label';
+	      var valueKey = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "value";
+	      var labelKey = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "label";
 
-	      var groupChoices = (0, _utils.isType)('Object', group) ? group.choices : Array.from(group.getElementsByTagName('OPTION'));
+	      var groupChoices = (0, _utils.isType)("Object", group) ? group.choices : Array.from(group.getElementsByTagName("OPTION"));
 	      var groupId = id ? id : Math.floor(new Date().valueOf() * Math.random());
 	      var isDisabled = group.disabled ? group.disabled : false;
 
@@ -2585,7 +2583,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        groupChoices.forEach(function (option) {
 	          var isOptDisabled = option.disabled || option.parentNode && option.parentNode.disabled;
-	          _this21._addChoice(option[valueKey], (0, _utils.isType)('Object', option) ? option[labelKey] : option.textContent.trim(), option.selected, isOptDisabled, groupId, option.customProperties, option.placeholder);
+	          _this21._addChoice(option[valueKey], (0, _utils.isType)("Object", option) ? option[labelKey] : option.textContent.trim(), option.selected, isOptDisabled, groupId, option.customProperties, option.placeholder);
 	        });
 	      } else {
 	        this.store.dispatch((0, _index3.addGroup)(group.label, group.id, false, group.disabled));
@@ -2601,7 +2599,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_getTemplate',
+	    key: "_getTemplate",
 	    value: function _getTemplate(template) {
 	      if (!template) {
 	        return null;
@@ -2622,27 +2620,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_createTemplates',
+	    key: "_createTemplates",
 	    value: function _createTemplates() {
 	      var _this22 = this;
 
 	      var globalClasses = this.config.classNames;
 	      var templates = {
 	        containerOuter: function containerOuter(direction) {
-	          return (0, _utils.strToEl)('\n          <div\n            class="' + globalClasses.containerOuter + '"\n            ' + (_this22.isSelectElement ? _this22.config.searchEnabled ? 'role="combobox" aria-autocomplete="list"' : 'role="listbox"' : '') + '\n            data-type="' + _this22.passedElement.type + '"\n            ' + (_this22.isSelectOneElement ? 'tabindex="0"' : '') + '\n            aria-haspopup="true"\n            aria-expanded="false"\n            dir="' + direction + '"\n            >\n          </div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div\n            class=\"" + globalClasses.containerOuter + "\"\n            " + (_this22.isSelectElement ? _this22.config.searchEnabled ? 'role="combobox" aria-autocomplete="list"' : 'role="listbox"' : "") + "\n            data-type=\"" + _this22.passedElement.type + "\"\n            " + (_this22.isSelectOneElement ? 'tabindex="0"' : "") + "\n            aria-haspopup=\"true\"\n            aria-expanded=\"false\"\n            dir=\"" + direction + "\"\n            >\n          </div>\n        ");
 	        },
 	        containerInner: function containerInner() {
-	          return (0, _utils.strToEl)('\n          <div class="' + globalClasses.containerInner + '"></div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div class=\"" + globalClasses.containerInner + "\"></div>\n        ");
 	        },
 	        itemList: function itemList() {
 	          var _classNames;
 
 	          var localClasses = (0, _classnames2.default)(globalClasses.list, (_classNames = {}, _defineProperty(_classNames, globalClasses.listSingle, _this22.isSelectOneElement), _defineProperty(_classNames, globalClasses.listItems, !_this22.isSelectOneElement), _classNames));
 
-	          return (0, _utils.strToEl)('\n          <div class="' + localClasses + '"></div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div class=\"" + localClasses + "\"></div>\n        ");
 	        },
 	        placeholder: function placeholder(value) {
-	          return (0, _utils.strToEl)('\n          <div class="' + globalClasses.placeholder + '">\n            ' + value + '\n          </div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div class=\"" + globalClasses.placeholder + "\">\n            " + value + "\n          </div>\n        ");
 	        },
 	        item: function item(data) {
 	          var _classNames2;
@@ -2654,61 +2652,61 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            localClasses = (0, _classnames2.default)(globalClasses.item, (_classNames3 = {}, _defineProperty(_classNames3, globalClasses.highlightedState, data.highlighted), _defineProperty(_classNames3, globalClasses.itemSelectable, !data.disabled), _defineProperty(_classNames3, globalClasses.placeholder, data.placeholder), _classNames3));
 
-	            return (0, _utils.strToEl)('\n            <div\n              class="' + localClasses + '"\n              data-item\n              data-id="' + data.id + '"\n              data-value="' + data.value + '"\n              data-deletable\n              ' + (data.active ? 'aria-selected="true"' : '') + '\n              ' + (data.disabled ? 'aria-disabled="true"' : '') + '\n              >\n              ' + data.label + '<!--\n           --><button\n                type="button"\n                class="' + globalClasses.button + '"\n                data-button\n                aria-label="Remove item: \'' + data.value + '\'"\n                >\n                Remove item\n              </button>\n            </div>\n          ');
+	            return (0, _utils.strToEl)("\n            <div\n              class=\"" + localClasses + "\"\n              data-item\n              data-id=\"" + data.id + "\"\n              data-value=\"" + data.value + "\"\n              data-deletable\n              " + (data.active ? 'aria-selected="true"' : "") + "\n              " + (data.disabled ? 'aria-disabled="true"' : "") + "\n              >\n              " + data.label + "<!--\n           --><button\n                type=\"button\"\n                class=\"" + globalClasses.button + "\"\n                data-button\n                aria-label=\"Remove item: '" + data.value + "'\"\n                >\n                Remove item\n              </button>\n            </div>\n          ");
 	          }
 
-	          return (0, _utils.strToEl)('\n          <div\n            class="' + localClasses + '"\n            data-item\n            data-id="' + data.id + '"\n            data-value="' + data.value + '"\n            ' + (data.active ? 'aria-selected="true"' : '') + '\n            ' + (data.disabled ? 'aria-disabled="true"' : '') + '\n            >\n            ' + data.label + '\n          </div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div\n            class=\"" + localClasses + "\"\n            data-item\n            data-id=\"" + data.id + "\"\n            data-value=\"" + data.value + "\"\n            " + (data.active ? 'aria-selected="true"' : "") + "\n            " + (data.disabled ? 'aria-disabled="true"' : "") + "\n            >\n            " + data.label + "\n          </div>\n        ");
 	        },
 	        choiceList: function choiceList() {
-	          return (0, _utils.strToEl)('\n          <div\n            class="' + globalClasses.list + '"\n            dir="ltr"\n            role="listbox"\n            ' + (!_this22.isSelectOneElement ? 'aria-multiselectable="true"' : '') + '\n            >\n          </div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div\n            class=\"" + globalClasses.list + "\"\n            dir=\"ltr\"\n            role=\"listbox\"\n            " + (!_this22.isSelectOneElement ? 'aria-multiselectable="true"' : "") + "\n            >\n          </div>\n        ");
 	        },
 	        choiceGroup: function choiceGroup(data) {
 	          var localClasses = (0, _classnames2.default)(globalClasses.group, _defineProperty({}, globalClasses.itemDisabled, data.disabled));
 
-	          return (0, _utils.strToEl)('\n          <div\n            class="' + localClasses + '"\n            data-group\n            data-id="' + data.id + '"\n            data-value="' + data.value + '"\n            role="group"\n            ' + (data.disabled ? 'aria-disabled="true"' : '') + '\n            >\n            <div class="' + globalClasses.groupHeading + '">' + data.value + '</div>\n          </div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div\n            class=\"" + localClasses + "\"\n            data-group\n            data-id=\"" + data.id + "\"\n            data-value=\"" + data.value + "\"\n            role=\"group\"\n            " + (data.disabled ? 'aria-disabled="true"' : "") + "\n            >\n            <div class=\"" + globalClasses.groupHeading + "\">" + data.value + "</div>\n          </div>\n        ");
 	        },
 	        choice: function choice(data) {
 	          var _classNames5;
 
 	          var localClasses = (0, _classnames2.default)(globalClasses.item, globalClasses.itemChoice, (_classNames5 = {}, _defineProperty(_classNames5, globalClasses.itemDisabled, data.disabled), _defineProperty(_classNames5, globalClasses.itemSelectable, !data.disabled), _defineProperty(_classNames5, globalClasses.placeholder, data.placeholder), _classNames5));
 
-	          return (0, _utils.strToEl)('\n          <div\n            class="' + localClasses + '"\n            data-select-text="' + _this22.config.itemSelectText + '"\n            data-choice\n            data-id="' + data.id + '"\n            data-value="' + data.value + '"\n            ' + (data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable') + '\n            id="' + data.elementId + '"\n            ' + (data.groupId > 0 ? 'role="treeitem"' : 'role="option"') + '\n            >\n            ' + data.label + '\n          </div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div\n            class=\"" + localClasses + "\"\n            data-select-text=\"" + _this22.config.itemSelectText + "\"\n            data-choice\n            data-id=\"" + data.id + "\"\n            data-value=\"" + data.value + "\"\n            " + (data.disabled ? 'data-choice-disabled aria-disabled="true"' : "data-choice-selectable") + "\n            id=\"" + data.elementId + "\"\n            " + (data.groupId > 0 ? 'role="treeitem"' : 'role="option"') + "\n            >\n            " + data.label + "\n          </div>\n        ");
 	        },
 	        input: function input() {
 	          var localClasses = (0, _classnames2.default)(globalClasses.input, globalClasses.inputCloned);
 
-	          return (0, _utils.strToEl)('\n          <input\n            type="text"\n            class="' + localClasses + '"\n            autocomplete="off"\n            autocapitalize="off"\n            spellcheck="false"\n            role="textbox"\n            aria-autocomplete="list"\n            >\n        ');
+	          return (0, _utils.strToEl)("\n          <input\n            type=\"text\"\n            class=\"" + localClasses + "\"\n            autocomplete=\"off\"\n            autocapitalize=\"off\"\n            spellcheck=\"false\"\n            role=\"textbox\"\n            aria-autocomplete=\"list\"\n            >\n        ");
 	        },
 	        dropdown: function dropdown() {
 	          var localClasses = (0, _classnames2.default)(globalClasses.list, globalClasses.listDropdown);
 
-	          return (0, _utils.strToEl)('\n          <div\n            class="' + localClasses + '"\n            aria-expanded="false"\n            >\n          </div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div\n            class=\"" + localClasses + "\"\n            aria-expanded=\"false\"\n            >\n          </div>\n        ");
 	        },
 	        notice: function notice(label) {
 	          var _classNames6;
 
-	          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+	          var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
 
-	          var localClasses = (0, _classnames2.default)(globalClasses.item, globalClasses.itemChoice, (_classNames6 = {}, _defineProperty(_classNames6, globalClasses.noResults, type === 'no-results'), _defineProperty(_classNames6, globalClasses.noChoices, type === 'no-choices'), _classNames6));
+	          var localClasses = (0, _classnames2.default)(globalClasses.item, globalClasses.itemChoice, (_classNames6 = {}, _defineProperty(_classNames6, globalClasses.noResults, type === "no-results"), _defineProperty(_classNames6, globalClasses.noChoices, type === "no-choices"), _classNames6));
 
-	          return (0, _utils.strToEl)('\n          <div class="' + localClasses + '">\n            ' + label + '\n          </div>\n        ');
+	          return (0, _utils.strToEl)("\n          <div class=\"" + localClasses + "\">\n            " + label + "\n          </div>\n        ");
 	        },
 	        option: function option(data) {
-	          return (0, _utils.strToEl)('\n          <option value="' + data.value + '" selected>' + data.label + '</option>\n        ');
+	          return (0, _utils.strToEl)("\n          <option value=\"" + data.value + "\" selected>" + data.label + "</option>\n        ");
 	        }
 	      };
 
 	      // User's custom templates
 	      var callbackTemplate = this.config.callbackOnCreateTemplates;
 	      var userTemplates = {};
-	      if (callbackTemplate && (0, _utils.isType)('Function', callbackTemplate)) {
+	      if (callbackTemplate && (0, _utils.isType)("Function", callbackTemplate)) {
 	        userTemplates = callbackTemplate.call(this, _utils.strToEl);
 	      }
 
 	      this.config.templates = (0, _utils.extend)(templates, userTemplates);
 	    }
 	  }, {
-	    key: '_setLoading',
+	    key: "_setLoading",
 	    value: function _setLoading(isLoading) {
 	      this.store.dispatch((0, _index3.setIsLoading)(isLoading));
 	    }
@@ -2720,17 +2718,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	  }, {
-	    key: '_createInput',
+	    key: "_createInput",
 	    value: function _createInput() {
 	      var _this23 = this;
 
-	      var direction = this.passedElement.getAttribute('dir') || 'ltr';
-	      var containerOuter = this._getTemplate('containerOuter', direction);
-	      var containerInner = this._getTemplate('containerInner');
-	      var itemList = this._getTemplate('itemList');
-	      var choiceList = this._getTemplate('choiceList');
-	      var input = this._getTemplate('input');
-	      var dropdown = this._getTemplate('dropdown');
+	      var direction = this.passedElement.getAttribute("dir") || "ltr";
+	      var containerOuter = this._getTemplate("containerOuter", direction);
+	      var containerInner = this._getTemplate("containerInner");
+	      var itemList = this._getTemplate("itemList");
+	      var choiceList = this._getTemplate("choiceList");
+	      var input = this._getTemplate("input");
+	      var dropdown = this._getTemplate("dropdown");
 
 	      this.containerOuter = containerOuter;
 	      this.containerInner = containerInner;
@@ -2743,18 +2741,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.passedElement.classList.add(this.config.classNames.input, this.config.classNames.hiddenState);
 
 	      // Remove element from tab index
-	      this.passedElement.tabIndex = '-1';
+	      this.passedElement.tabIndex = "-1";
 
 	      // Backup original styles if any
-	      var origStyle = this.passedElement.getAttribute('style');
+	      var origStyle = this.passedElement.getAttribute("style");
 
 	      if (Boolean(origStyle)) {
-	        this.passedElement.setAttribute('data-choice-orig-style', origStyle);
+	        this.passedElement.setAttribute("data-choice-orig-style", origStyle);
 	      }
 
-	      this.passedElement.setAttribute('style', 'display:none;');
-	      this.passedElement.setAttribute('aria-hidden', 'true');
-	      this.passedElement.setAttribute('data-choice', 'active');
+	      this.passedElement.setAttribute("style", "display:none;");
+	      this.passedElement.setAttribute("aria-hidden", "true");
+	      this.passedElement.setAttribute("data-choice", "active");
 
 	      // Wrap input in container preserving DOM ordering
 	      (0, _utils.wrap)(this.passedElement, containerInner);
@@ -2763,7 +2761,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      (0, _utils.wrap)(containerInner, containerOuter);
 
 	      if (this.isSelectOneElement) {
-	        input.placeholder = this.config.searchPlaceholderValue || '';
+	        input.placeholder = this.config.searchPlaceholderValue || "";
 	      } else if (this.placeholder) {
 	        input.placeholder = this.placeholder;
 	        input.style.width = (0, _utils.getWidthOfInput)(input);
@@ -2788,7 +2786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      if (this.isSelectElement) {
-	        var passedGroups = Array.from(this.passedElement.getElementsByTagName('OPTGROUP'));
+	        var passedGroups = Array.from(this.passedElement.getElementsByTagName("OPTGROUP"));
 
 	        this.highlightPosition = 0;
 	        this.isSearching = false;
@@ -2808,10 +2806,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          passedOptions.forEach(function (o) {
 	            allChoices.push({
 	              value: o.value,
-	              label: o.innerHTML,
+	              label: o.textContent.trim(),
 	              selected: o.selected,
 	              disabled: o.disabled || o.parentNode.disabled,
-	              placeholder: o.hasAttribute('placeholder')
+	              placeholder: o.hasAttribute("placeholder")
 	            });
 	          });
 
@@ -2845,12 +2843,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // Add any preset values seperated by delimiter
 	        this.presetItems.forEach(function (item) {
 	          var itemType = (0, _utils.getType)(item);
-	          if (itemType === 'Object') {
+	          if (itemType === "Object") {
 	            if (!item.value) {
 	              return;
 	            }
 	            _this23._addItem(item.value, item.label, item.id, undefined, item.customProperties, item.placeholder);
-	          } else if (itemType === 'String') {
+	          } else if (itemType === "String") {
 	            _this23._addItem(item);
 	          }
 	        });
